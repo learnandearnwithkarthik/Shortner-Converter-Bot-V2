@@ -40,7 +40,7 @@ Example:** `/api de303d5270f481aec928f39883da7b7f9a8812ac `
 If You Want Any **Other Shortner** Link Converter Bot Instead Of ""Moneycase** than **contact** at 👉 @Playitlinksofficial (all **shortners support** available.)**
 '''
 
-ABOUT_TEXT = '''**Hey! My name is @MoneyCaselinkConverterBot. I am Shortener Fly Link Converter Bot.**
+ABOUT_TEXT = '''**Hey! My name is @MoneyCaselinkConverterBot. I am Moneycase Link Converter Bot.**
 
 **⚡Features⚡**
 
