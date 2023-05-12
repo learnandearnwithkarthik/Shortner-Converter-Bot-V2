@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 channel = UPDATE_CHANNEL
 
-ft = f"Due To Overload Only Channel Sub Are Use This Bot Join @Shortnerfly."
+ft = f"Due To Overload Only Channel Sub Are Use This Bot Join @MoneyCaseOfficial."
 
 
 # Private Chat
