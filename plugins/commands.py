@@ -226,3 +226,17 @@ async def unban_user_handler(c: Client, m: Message):
                 await m.reply("User doesn't exist")
     except Exception as e:
         logging.exception(e, exc_info=True)
+
+@Bot.on_message(filters.command("setdomain"))
+async def set_default_domain(_, message):
+    if len(message.command) != 2:
+        await message.reply("Usage: /setdomain [domain]")
+        return
+
+    new_domain = message.command[1]
+    supported_domains = ["pdisk.site", "streaam.in/t/", "is.gd"]  # Add more if needed
+    if new_domain in supported_domains:
+        update_default_shortener_domain(new_domain)
+        await message.reply(f"Default shortener domain set to {new_domain}")
+    else:
+        await message.reply("Invalid domain. Supported domains: " + ", ".join(supported_domains))
