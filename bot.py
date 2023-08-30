@@ -40,6 +40,8 @@ if __name__ == "__main__" :
         bot_token=BOT_TOKEN,
         api_id=API_ID,
         api_hash=API_HASH,
+      def update_default_shortener_domain(new_domain):
+    os.environ["DEFAULT_SHORTENER_DOMAIN"] = new_domain,
         plugins=plugins
     )
     
