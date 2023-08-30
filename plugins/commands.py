@@ -3,6 +3,10 @@
 import contextlib
 import datetime
 import logging
+from pyrogram import Client, filters
+import contextlib
+import logging
+from helpers import update_default_shortener_domain
 
 from validators import *
 from config import *
@@ -227,7 +231,9 @@ async def unban_user_handler(c: Client, m: Message):
     except Exception as e:
         logging.exception(e, exc_info=True)
 
-@Bot.on_message(filters.command("setdomain"))
+# ... (Other imports and code)
+
+@Client.on_message(filters.command("setdomain"))
 async def set_default_domain(_, message):
     if len(message.command) != 2:
         await message.reply("Usage: /setdomain [domain]")
@@ -240,3 +246,5 @@ async def set_default_domain(_, message):
         await message.reply(f"Default shortener domain set to {new_domain}")
     else:
         await message.reply("Invalid domain. Supported domains: " + ", ".join(supported_domains))
+
+# ... (Other command handlers and code)
